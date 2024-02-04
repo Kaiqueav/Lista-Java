@@ -6,9 +6,9 @@ public class Main {
 
          Queue fila = new Queue();
 
-             fila.enqueue(new No("primeiro"));
-             fila.enqueue(new No("segundo"));
-             fila.enqueue(new No("terceiro"));
+             fila.enqueue("primeiro");
+             fila.enqueue("segundo");
+             fila.enqueue("terceiro");
 
              System.out.println(fila);
 
