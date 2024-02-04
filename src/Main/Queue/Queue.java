@@ -8,12 +8,13 @@ public class Queue {
         this.refNoEntrando = null;
     }
 
-    public void enqueue(No newNo){
+    public void enqueue(Object obj){
+        No newNo = new No();
         newNo.setRefNo(refNoEntrando);
         refNoEntrando = newNo;
     }
 
-    public No first(){
+    public Object first(){
         if(!this.isEmpty()) {
             No firstNo = refNoEntrando;
             while (true){
@@ -23,12 +24,12 @@ public class Queue {
                     break;
                 }
             }
-            return firstNo;
+            return firstNo.getObject();
         }
         return null;
     }
 
-    public No dequeue(){
+    public Object dequeue(){
         if(!this.isEmpty()) {
             No firstNo = refNoEntrando;
             No noAuxiliar = refNoEntrando;
@@ -40,7 +41,7 @@ public class Queue {
                     noAuxiliar.setRefNo(null);
                     break;
                 }
-                return firstNo;
+                return firstNo.getObject();
             }
         }
         return null;
