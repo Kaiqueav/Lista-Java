@@ -23,8 +23,7 @@ public class Queue {
                     break;
                 }
             }
-
-
+            return firstNo;
         }
         return null;
     }
@@ -57,7 +56,7 @@ public class Queue {
      No noAuxiliar = refNoEntrando;
      if (refNoEntrando!=null){
         while (true){
-            stringReturn += " [No{retorno"+ noAuxiliar.getObject()+"}] ---> ";
+            stringReturn += " [No{retorno="+ noAuxiliar.getObject()+"}] ---> ";
             if (noAuxiliar.getRefNo()!=null){
                     noAuxiliar = noAuxiliar.getRefNo();
             }else{
